@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Next Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .gradient-background {
+      background: rgb(255, 208, 229);
+      background: linear-gradient(180deg, rgba(255, 208, 229, 1) 0%, rgba(255, 232, 242, 1) 36%, rgba(255, 255, 255, 1) 100%);
+    }
+
+    .bounce2 {
+      animation: bounce2 2s ease infinite;
+    }
+
+    @keyframes bounce2 {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+      }
+      40% {
+        transform: translateY(-20px);
+      }
+      60% {
+        transform: translateY(-10px);
+      }
+    }
+
+    /* Ensure buttons are centered */
+    #responseButtons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body class="gradient-background">
+  <div class="flex items-center justify-center h-screen">
+    <div class="flex flex-col items-center p-4">
+      <img id="imageDisplay" src="./images/drive.gif" alt="Celebration Image" class="rounded-md h-[300px]" style="object-fit: cover;" />
+      <h2 id="message" class="text-4xl font-bold text-[#bd1e59] my-4">ញ៉ាំអីអត់?</h2>
+      <p class="text-xl text-gray-700 text-center">ចាំបងទៅយក​ ញ៉ាំអីមួយបងអត់ 💖</p>
+      
+      <!-- Yes and No Buttons -->
+      <div id="responseButtons">
+        <button id="yesButton" class="bounce2 inline-flex items-center justify-center whitespace-nowrap rounded-md text-[20px] font-medium disabled:pointer-events-none disabled:opacity-50 hover:bg-green-400 min-h-12 min-w-[75px] px-4 py-2 bg-green-500 text-white transition"
+        onclick="window.location.href='prefinal.html'">Yes</button>
+        
+        <button id="noButton" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-[20px] font-medium transition disabled:pointer-events-none disabled:opacity-50 hover:bg-red-700 h-12 min-w-[75px] w-auto px-4 py-2 bg-red-500 text-white"
+        onclick="window.location.href='prefinal.html'">No</button>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
